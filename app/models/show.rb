@@ -6,7 +6,6 @@ class Show < ActiveRecord::Base
   
   def actors_list
     self.actors.collect {|actor| actor.full_name}
-    #self.actors.map {|c| "#{c.name} - #{c.show.name}"}
   end 
   
   
