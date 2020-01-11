@@ -5,8 +5,8 @@ class Show < ActiveRecord::Base
   belongs_to :network
   
   def actors_list
-    #Show.actors.collect {|actor| actor.full_name}
-    self.actors.map {|c| "#{c.name} - #{c.show.name}"}
+    self.actors.collect {|actor| actor.full_name}
+    #self.actors.map {|c| "#{c.name} - #{c.show.name}"}
   end 
   
   
